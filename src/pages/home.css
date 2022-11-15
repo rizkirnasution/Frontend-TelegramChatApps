@@ -1,0 +1,43 @@
+body{
+    overflow-x: hidden;
+}
+.container-alert{
+    margin-top: -75px;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    text-align: center;
+    height: 0px;
+    border-radius: 0 0 10px 10px;
+    color: #fff;
+}
+#note{
+    position: absolute;
+    z-index: 101;
+    top: 0;
+    left: 0;
+    right: 0;
+    background:  #7E98DF;
+    text-align: center;
+    line-height: 2.5;
+    overflow: hidden; 
+    -webkit-box-shadow: 0 0 5px black;
+    -moz-box-shadow:    0 0 5px black;
+    box-shadow:         0 0 5px black;
+    transform: translateY(-50px);
+    animation: slideDown .2s .5s 1 ease forwards;
+    transition: .5s;
+}
+@keyframes slideDown {
+    0%  {transform: translateY(-50px); }
+    /* 20% {transform: translateY(-40px);}
+    40% {transform: translateY(-30px);}
+    60% {transform: translateY(-20px);}
+    80% {transform: translateY(-10px);} */
+    100% {transform: translateY(90px); }
+}
+
+.chat{
+    width: 100%;
+  }
+  
