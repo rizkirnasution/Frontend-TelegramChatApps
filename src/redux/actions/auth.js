@@ -5,6 +5,11 @@ export const login = async (data, setErrors) => {
     const res = await axios.post(
       `${process.env.REACT_APP_API_URL}/auth/login`,
       data,
+      headers : {
+          "Access-Control-Allow-Origin": "*",
+          'Access-Control-Allow-Methods': 'GET, POST, PATCH, PUT, DELETE, OPTIONS',
+          'Access-Control-Allow-Headers': 'Origin, Content-Type, X-Auth-Token',
+        }
     );
 
     localStorage.setItem('token', res.data.token.jwt);
@@ -28,7 +33,12 @@ export const login = async (data, setErrors) => {
 
 export const register = async (data, setErrors) => {
   try {
-    await axios.post(`${process.env.REACT_APP_API_URL}/auth/register`, data);
+    await axios.post(`${process.env.REACT_APP_API_URL}/auth/register`, data,
+    headers : {
+          "Access-Control-Allow-Origin": "*",
+          'Access-Control-Allow-Methods': 'GET, POST, PATCH, PUT, DELETE, OPTIONS',
+          'Access-Control-Allow-Headers': 'Origin, Content-Type, X-Auth-Token',
+        });
 
     return true;
   } catch (error) {
@@ -48,7 +58,12 @@ export const register = async (data, setErrors) => {
 
 export const forgot = async (data, setErrors) => {
   try {
-    await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/auth/forgot`, data);
+    await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/auth/forgot`, data,
+    headers : {
+          "Access-Control-Allow-Origin": "*",
+          'Access-Control-Allow-Methods': 'GET, POST, PATCH, PUT, DELETE, OPTIONS',
+          'Access-Control-Allow-Headers': 'Origin, Content-Type, X-Auth-Token',
+        });
 
     return true;
   } catch (error) {
