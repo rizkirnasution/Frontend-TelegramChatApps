@@ -56,7 +56,7 @@ REACT_APP_API_URL=YOUR_API_URL
 <img src="./readme/ss-home.PNG" />
 
 ### Edit Profile
-<img src="./readme/ss-edit-profile.PNG" />
+<img src="./readme/ss-editprofile.PNG" />
 
 ### Chat
 <img src="./readme/ss-roomchatprivate.PNG" />
